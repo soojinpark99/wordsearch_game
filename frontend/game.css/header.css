@@ -1,0 +1,26 @@
+header {
+  margin: 20px 0 20px 0;
+  border-bottom: 4px solid #008080;
+}
+
+.thewordsearch {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  color: #008080;
+}
+
+.the {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.word {
+  font-size: 40px;
+}
+
+.search {
+  font-size: 60px;
+  font-weight: 800;
+}

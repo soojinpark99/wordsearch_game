@@ -1,0 +1,125 @@
+body {
+  background-color: #faffe3;
+  margin: 0 70px 0 70px;
+}
+
+main {
+  color: #555555;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  font-family: "Rubik", sans-serif;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  width: 600px;
+}
+
+.description {
+  font-size: 20px;
+  margin-bottom: 5px;
+  width: 600px;
+}
+
+.game-board {
+  display: flex;
+  gap: 20px;
+}
+
+.word-block__board {
+  background-color: #fefffc;
+  width: 600px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.word-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  aspect-ratio: 1/1;
+
+  border: 1px solid #e0e0de;
+  font-size: 25px;
+
+  user-select: none;
+}
+
+.word-list {
+  font-size: 15px;
+}
+
+.selected {
+  background-color: #a0d3e8;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.correct {
+  background-color: #ffd1bf;
+}
+
+.timer {
+  width: 600px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.start-box {
+  background-color: rgba(28, 135, 134, 0.9);
+  color: white;
+  width: 450px;
+  height: 300px;
+  border-radius: 20px;
+  font-size: 17px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  position: absolute;
+  top: 300px;
+  left: 150px;
+}
+
+.start-box input {
+  height: 25px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.start-box button {
+  background-color: #ffeb3a;
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 20px;
+
+  cursor: pointer;
+}
+
+.game-over {
+  background-color: rgba(28, 135, 134, 0.9);
+  color: white;
+  width: 450px;
+  height: 300px;
+  border-radius: 20px;
+  font-size: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  position: absolute;
+  top: 300px;
+  left: 150px;
+
+  display: none;
+}
