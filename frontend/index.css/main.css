@@ -13,9 +13,7 @@ main {
   text-align: center;
 }
 
-.title div,
-.description div,
-.word-list div {
+.label {
   font-size: 20px;
   font-weight: 600;
 }
@@ -30,26 +28,13 @@ main {
   margin: 0;
 }
 
-.word-list__input {
+.word-input__grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   width: 100%;
 }
 
-.title input {
-  height: 30px;
-}
-.description input {
-  height: 60px;
-}
-
-.word-list input {
-  height: 30px;
-}
-
-.title input,
-.description input,
-.word-list input {
+input {
   width: 100%;
   background-color: #f6f6f6;
   border: 1px solid #cccccc;
@@ -57,6 +42,29 @@ main {
   padding: 0 7px 0 7px;
 
   box-sizing: border-box;
+}
+
+.title-input {
+  height: 30px;
+}
+.description-input {
+  height: 60px;
+}
+.word-input {
+  height: 30px;
+}
+
+.input-err {
+  background-color: #ce3405;
+  color: white;
+  height: 30px;
+  font-size: 13px;
+  font-weight: 300px;
+  padding-left: 8px;
+
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .submit {

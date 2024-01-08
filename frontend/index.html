@@ -32,20 +32,22 @@
       </div>
       <form id="maker-form">
         <div class="title">
-          <div>Title</div>
-          <input type="text" id="title" name="title" required />
+          <div class="title label">Title</div>
+          <input type="text" class="title-input" name="title" />
+          <div class="title input-err">↪ Title is required</div>
         </div>
         <div class="description">
-          <div>Description</div>
-          <input type="text" id="description" name="description" required />
+          <div class="description label">Description</div>
+          <input type="text" class="description-input" name="description" />
+          <div class="description input-err">↪ Description is required</div>
         </div>
         <div class="word-list">
-          <div>Word List</div>
+          <div class="word-list label">Word List</div>
           <p>
             Between 10 and 30 words. Puzzles are randomly generated using a
             selection of your words at play time.
           </p>
-          <div class="word-list__input">
+          <div class="word-input__grid">
             <input type="text" class="word-input" name="word" />
             <input type="text" class="word-input" name="word" />
             <input type="text" class="word-input" name="word" />
@@ -78,6 +80,9 @@
             <input type="text" class="word-input" name="word" />
           </div>
         </div>
+        <div class="word input-err">↪ At least 10 words are required</div>
+        <div class="eng input-err">↪ Only a-z are allowed</div>
+
         <button type="submit" class="submit">Submit</button>
       </form>
       <script src="index.js"></script>
