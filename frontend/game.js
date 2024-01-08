@@ -85,7 +85,7 @@ function gameStart() {
       const timer = document.querySelector(".timer");
       timer.innerText = `${분}:${초}`;
     }
-    timer = setInterval(setTime, 1000);
+    timeInterval = setInterval(setTime, 1000);
   }
 
   startTimer();
@@ -116,9 +116,16 @@ function gameStart() {
 
   // --- 게임 종료 ---
   function gameOver() {
-    clearInterval(timer);
+    clearInterval(timeInterval);
+
     const gameOverBox = document.querySelector(".game-over");
+    const retryBtn = document.querySelector(".retry-btn");
+
     gameOverBox.style.display = "flex";
+
+    retryBtn.addEventListener("click", () => {
+      (location || window.location || document.location).reload();
+    });
   }
 
   // --- 게임 종료 조건에 맞는지 확인 ---
@@ -172,7 +179,7 @@ function gameStart() {
   });
 }
 
-const startBtn = document.querySelector(".start-button");
+const startBtn = document.querySelector(".start-btn");
 
 function mouseOver(event) {
   startBtn.style.textDecoration = "underline";

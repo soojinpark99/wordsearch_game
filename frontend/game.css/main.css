@@ -91,7 +91,7 @@ main {
   font-size: 15px;
 }
 
-.start-box button {
+.start-btn {
   background-color: #ffeb3a;
   width: 200px;
   height: 100px;
@@ -115,11 +115,20 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 15px;
 
   position: absolute;
   top: 300px;
   left: 150px;
 
   display: none;
+}
+
+.retry-btn {
+  background-color: #ffeb3a;
+  width: 130px;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
 }
