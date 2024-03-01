@@ -1,12 +1,13 @@
 // ------ 게임 세팅 ------
+
+// !!! 서버에서 게임 정보 받아오기 !!!
 const title = document.querySelector(".title");
 title.innerText = "ANIMALS";
+
 const description = document.querySelector(".description");
 description.innerText = "General Animals";
 
-// 단어 리스트
 const wordList = ["DOG", "CAT", "FISH", "RABBIT", "BIRD"];
-console.log(wordList);
 
 // --- 알파벳을 채워넣는 함수 ---
 function fillAlphabets() {
@@ -68,7 +69,6 @@ wordList.forEach((word) =>
 fillAlphabets();
 
 // ------ 게임 시작 ------
-
 function gameStart() {
   const startBox = document.querySelector(".start-box");
   startBox.remove();
@@ -114,15 +114,15 @@ function gameStart() {
     checkSelectedWord();
   }
 
-  // --- 게임 종료 ---
+  // --- 게임 종료 이후 ---
   function gameOver() {
     clearInterval(timeInterval);
 
     const gameOverBox = document.querySelector(".game-over");
-    const retryBtn = document.querySelector(".retry-btn");
-
     gameOverBox.style.display = "flex";
 
+    // Retry 버튼 클릭 시 다시 시작
+    const retryBtn = document.querySelector(".retry-btn");
     retryBtn.addEventListener("click", () => {
       (location || window.location || document.location).reload();
     });
@@ -179,12 +179,12 @@ function gameStart() {
   });
 }
 
+// --- 스타트 버튼 이벤트 ---
 const startBtn = document.querySelector(".start-btn");
 
 function mouseOver(event) {
   startBtn.style.textDecoration = "underline";
 }
-
 function mouseOut(event) {
   startBtn.style.textDecoration = "none";
 }
